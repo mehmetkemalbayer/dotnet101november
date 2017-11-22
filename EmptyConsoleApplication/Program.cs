@@ -10,6 +10,14 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
+			string fullname = "Mehmet Zeki Seyhan";
+			string experience = "8 ay";
+			string department = "Uygulama Destek - Sermaye + Hazine";
+			Console.WriteLine("İsim: " + fullname );
+			Console.WriteLine("Deneyim: " + experience);
+			Console.WriteLine("Bölüm: " + department);
+			Console.ReadLine();
+
         }
     }
 }
