@@ -13,8 +13,8 @@ namespace EmptyConsoleApplication
             string fullName = "Aynur Bostancı";
             short experience = 8 ;
             string department = "uygulama destek";
-            string programinglanguage = "c#,.net";
-            string experation = "";
+            string programinglanguage = "c";
+            string experation = "başarı";
             Console.WriteLine("isim:"+fullName);
             Console.WriteLine("tecrübe:"+experience+"ay");
             Console.WriteLine("bölüm:"+department);
