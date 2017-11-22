@@ -14,11 +14,13 @@ namespace EmptyConsoleApplication
             int experience = 12;
             String department = "mimari yönetim";
             String expectation = "huzur";
+            String diller = "Java, Cobol";
 
             Console.WriteLine("isim : " + name);
             Console.WriteLine("tecrübe : " + experience);
             Console.WriteLine("bölüm : " + department);
             Console.WriteLine("beklenti : " + expectation);
+            Console.WriteLine("diller : " + diller);
             Console.Read();
         }
     }
