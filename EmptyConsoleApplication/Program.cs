@@ -18,7 +18,7 @@ namespace EmptyConsoleApplication
 
             Console.WriteLine("İsim = " + FullName);
             Console.WriteLine("Birim = " + Department);
-            Console.WriteLine("Deneyim = " + Experience);
+            Console.WriteLine("Deneyim = " + Experience + " yıl");
             Console.WriteLine("Programlama Dilleri = " + ProgrammingLanguage);
             Console.WriteLine("Beklenti = " + Expectation);
             Console.ReadLine(); /*bu komut siyah ekranı bekletir.*/
