@@ -14,7 +14,7 @@ namespace EmptyConsoleApplication
             string experience = "5 ay";
             string department = "Resmi ve Özel Kurum Ödm. Uyg.";
             string programmingLanguages = "Cobol, Java";
-            string expectetion = "C# la ilgili birşeyler yazabilmek";
+            string expectetion = "C# la birşeyler yazabilmek";
                 Console.WriteLine( "İsim: " + fullName );
                 Console.WriteLine("Tecrübe: " + experience);
                 Console.WriteLine("Departman: " + department);
