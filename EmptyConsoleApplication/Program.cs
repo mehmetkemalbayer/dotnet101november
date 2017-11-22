@@ -20,7 +20,7 @@ namespace EmptyConsoleApplication
             Console.WriteLine("Bölüm: " + department);
             Console.WriteLine("Diller: " + programmingLanguages);
             Console.WriteLine("Beklenti: " + expectation);
-            Console.ReadLine();
+
         }
     }
 }
