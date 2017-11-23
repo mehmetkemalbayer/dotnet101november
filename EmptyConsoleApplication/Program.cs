@@ -7,25 +7,25 @@ using System.Threading.Tasks;
 namespace EmptyConsoleApplication
 {
 
-    class Program
+    class Programer
     {
         static void Main(string[] args)
 
         {
-            User firstUser = new User(5);
-            firstUser.WriteInfo();
+            Animal Animal = new Animal();
+            Animal.AnimalSound();
 
-            User secondUser = new User();
-            secondUser.WriteInfo();
+            Dog Dog = new Dog();
+            Dog.DogSound();
 
-            /*
-            * Name : "Default"
-            * Age : 0
-            * PhoneNumber : 55555555
-            * CitizenNumber : 00000000000
-            * Gender : "-"
-           */
+            Cat Cat = new Cat();
+            Cat.CatSound();
+
+            Mouse Mouse = new Mouse();
+            Mouse.MouseSound();
+
+            Console.ReadLine();
         }
-    }
 
+    }
 }

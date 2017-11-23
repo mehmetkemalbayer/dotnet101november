@@ -8,7 +8,6 @@ namespace EmptyConsoleApplication
 {
     class User
     {
-
         public string Name { get; set; }
 
         public short Age { get; set; }
@@ -21,6 +20,11 @@ namespace EmptyConsoleApplication
 
         public User()
             {
+            this.Name = "Default";
+            this.Age = 0;
+            this.PhoneNumber = "5555555555";
+            this.CitizenNumber = 0;
+            this.Gender = '-';
             }
 
         public User(long CitizenNumber)
@@ -32,5 +36,7 @@ namespace EmptyConsoleApplication
             Console.WriteLine("Name : " + Name + "\nAge : " + Age + "\nPhoneNumber : " + PhoneNumber + "\nCitizenNumber : " + CitizenNumber + "\nGender : " + Gender);
             Console.ReadLine();
             }
+
+
     }
 }
