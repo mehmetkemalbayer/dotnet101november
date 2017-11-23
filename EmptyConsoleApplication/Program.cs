@@ -11,11 +11,13 @@ namespace EmptyConsoleApplication
         static void Main(string[] args)
         {
             double toplam = 0;
-            for (int i = 1; i < 1000; i++)
+            Console.WriteLine("1'den büyük bir sayı giriniz");
+            int sayi = Int32.Parse(Console.ReadLine());
+            for (int i = 1; i < sayi; i++)
             {
                 toplam += i;
             }
-            Console.WriteLine("1den 1000e kadar toplam = " + toplam);
+            Console.WriteLine("1den " + sayi + "'e kadar toplam = " + toplam);
             Console.Read();
         }
     }
