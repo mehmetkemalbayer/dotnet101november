@@ -10,31 +10,28 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
-
-            User firstUser = new User(5);
-            firstUser.WriteInfo();
-
-            User secondUser = new User();
-            secondUser.WriteInfo();
+            Cat cat1 = new Cat();
+            cat1.Sound();
+            Dog dog1 = new Dog();
+            dog1.Sound();
+            Mouse mouse1 = new Mouse();
+            mouse1.Sound();
 
             Console.ReadLine();
 
-            
+
+
+
 
         }
 
     }
 
+}
 
-            /*
-             * Name : "Default"
-             * Age: 0 
-             * PhoneNumber : 5555555555
-             * CitizenNumber : 00000000000
-             * Gender : "-"
-             * 
-            */
+
+            
                    
     
-         }
+         
       
