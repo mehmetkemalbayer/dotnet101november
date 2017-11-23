@@ -4,22 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmptyConsoleApplication
+namespace ConsoleApplication2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string fullName = "Emre KALYON";
-            short experience = 10;
-            string programmingLanguages = ".net, cobol";
-            string expectations = ".NET yazabileceğimi düşünerek ayrılmak";
-            string department = "Resmi ve Özel Ödemeler Müdürlüğü";
-            Console.WriteLine("İsim: " + fullName);
-            Console.WriteLine("Tecrübe: " + experience);
-            Console.WriteLine("Bölüm: " + department);
-            Console.WriteLine("Kullandığı Diller: " + programmingLanguages);
-            Console.WriteLine("Bekletiler: " + expectations);
+            Console.WriteLine("Tutar Giriniz: ");
+            string girilenTutar = Console.ReadLine();
+            var convertDecimal = Convert.ToDecimal(girilenTutar);
+            Console.WriteLine(girilenTutar + " girdiniz.");
+
+
+            Console.WriteLine("Yıllık Faizi Giriniz: ");
+            string girilenFaiz = Console.ReadLine();
+            var convertInterest = Convert.ToDecimal(girilenFaiz);
+            Console.WriteLine(convertInterest + " faiz oranıyla hesaplama yapılacak.");
+
+            Console.WriteLine("Kaç Yıl Vade ile İşlem Yapılacağını Giriniz: ");
+            string girilenYil = Console.ReadLine();
+            var vadeYil = Convert.ToDecimal(girilenYil);
+            Console.WriteLine(vadeYil + " yıl için faiz hesaplanacak.");
+
+            Console.ReadLine();
+            decimal futureValue = (convertInterest * convertDecimal / 100) + convertDecimal;
+            Console.WriteLine("Dönem Sonunda Ödenecek Tutar: " + futureValue);
             Console.ReadLine();
         }
     }
