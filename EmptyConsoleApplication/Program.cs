@@ -9,39 +9,32 @@ namespace EmptyConsoleApplication
     class Program
     {
         static void Main(string[] args)
-        {            
+        {
 
-            Console.WriteLine("Tutar Giriniz : ");
-            string apara = Console.ReadLine();
-            
-            Console.WriteLine("Yıl Giriniz : ");
-            string ayıl = Console.ReadLine();
-                        
-            Console.WriteLine("Faiz Giriniz : ");
-            string afaiz = Console.ReadLine();
+            User firstUser = new User(5);
+            firstUser.WriteInfo();
 
-            decimal para = Convert.ToDecimal(apara);
-            decimal faiz = Convert.ToDecimal(afaiz);
-            int yıl = Convert.ToInt16(ayıl);
-
-
-
-            decimal hesaplama = (para * faiz * yıl) / 100;
-
-            Console.WriteLine(para);
-            Console.WriteLine(ayıl);
-            Console.WriteLine(faiz);
-            Console.WriteLine(hesaplama);
+            User secondUser = new User();
+            secondUser.WriteInfo();
 
             Console.ReadLine();
 
-
             
 
-
-
-
         }
-        
+
     }
-}
+
+
+            /*
+             * Name : "Default"
+             * Age: 0 
+             * PhoneNumber : 5555555555
+             * CitizenNumber : 00000000000
+             * Gender : "-"
+             * 
+            */
+                   
+    
+         }
+      
