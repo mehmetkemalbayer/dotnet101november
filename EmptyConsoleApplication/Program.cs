@@ -14,6 +14,7 @@ namespace EmptyConsoleApplication
 			for (int i = 0; i <= 1000; i++)
 			{
 				total = total + i;
+				Console.WriteLine(total);
 			}
 			Console.WriteLine("Toplam: " + total);
 			Console.ReadLine();
