@@ -23,24 +23,29 @@ namespace EmptyConsoleApplication
             Console.WriteLine("Beklenti: @'aaa'" + expectation);
             Console.ReadLine();*/
 
-            Console.WriteLine("Tutar giriniz: ");
-            string input = Console.ReadLine();
-            //Console.WriteLine(input + " girdiniz.");
-            //Console.ReadLine();
-            decimal dec=0;
-            try { dec = Convert.ToDecimal(input); }
-            catch (FormatException e) {
-                Console.WriteLine(e.Message);
-                Console.ReadLine();
-            }
+            // Faiz tutarı hesaplaması
+            try {
+                Console.WriteLine("Tutar giriniz: ");
+                string input = Console.ReadLine();
+                //Console.WriteLine(input + " girdiniz.");
+                //Console.ReadLine();
+                decimal dec = 0;
+                dec = Convert.ToDecimal(input);
+            
             //Console.WriteLine(dec + " decimal.");
             Console.WriteLine("Faiz oranı giriniz: ");
             decimal faiz = Convert.ToDecimal(Console.ReadLine());
             Console.WriteLine("Yıl: ");
             decimal yil = Convert.ToDecimal(Console.ReadLine());
             decimal faizdahiltutar = dec + yil * dec * faiz / 100;
-            Console.WriteLine("%" faiz + " faizle " + yil + " yıllık tutar: "+ faizdahiltutar);
+            Console.WriteLine("%" + faiz + " faizle " + yil + " yıllık tutar: " + faizdahiltutar);
             Console.ReadLine();
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine(e.Message);
+                Console.ReadLine();
+            }
         }
     }
 }
