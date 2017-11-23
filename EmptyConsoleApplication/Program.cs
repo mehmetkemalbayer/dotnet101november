@@ -6,22 +6,37 @@ using System.Threading.Tasks;
 
 namespace EmptyConsoleApplication
 {
+
     class Program
     {
+       
         static void Main(string[] args)
         {
-            string fullName = "Semra Güngör";
-            short experience = 7;
-            string department = "Ödemeler";
-            string languages = "Cobol, C, delphi";
-            string expectation =  ".net öğrenmeye nereden başlayacağıma dair aydınlanarak ayrılmak istiyorum";
-            Console.WriteLine("isim:" + fullName);
-            Console.WriteLine("experience:" + experience);
-            Console.WriteLine("department" + department);
-            Console.WriteLine("languages:" + languages);
-            Console.WriteLine("expectation" + expectation);
+            Console.WriteLine("tutarı giriniz");
+            string tutar = Console.ReadLine();
+            Console.WriteLine("yılı giriniz");
+            string yil = Console.ReadLine();
+            Console.WriteLine("faizi giriniz");
+            string faiz = Console.ReadLine();
+            decimal tutar1 = Convert.ToDecimal(tutar);
+            decimal yil1 = Convert.ToDecimal(yil);
+            decimal faiz1 = Convert.ToDecimal(faiz);
+
+            decimal faiz_getirisi = tutar1 * (faiz1 / 100) * yil1;
+
+            Console.WriteLine("faiz getirisi" + faiz_getirisi);
             Console.ReadLine();
+                       
+            
+
+
+
 
         }
+
+
     }
+
+
 }
+
