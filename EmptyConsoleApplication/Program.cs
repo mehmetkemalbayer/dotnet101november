@@ -10,11 +10,36 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
-            User firstUser = new User(5);
-            firstUser.ReturnInfo();
-            User secondUser = new User();
-            secondUser.ReturnInfo();
+
+            Animal animal = new Animal();
+            animal.Sound();
+            Cat cat = new Cat();
+            cat.Sound();
+            Dog dog = new Dog();
+            dog.Sound();
+            Fox fox = new Fox();
+            fox.Sound();
             Console.ReadLine();
+            /*
+            //Calculator
+            string nb1 = Console.ReadLine();
+            string nb2 = Console.ReadLine();
+            SimpleCalculator sCalc = new SimpleCalculator();
+            int int1 = Convert.ToInt32(nb1);
+            int int2 = Convert.ToInt32(nb2);
+            int int3 = sCalc.Multiply(int1, int2);
+            Console.WriteLine(int3);
+            Console.ReadLine();
+            */
+
+            /*
+            //user class
+            User firstUser = new User(5);
+            firstUser.WriteInfo();
+            User secondUser = new User();
+            secondUser.WriteInfo();
+            Console.ReadLine();
+            */
 
             // myinfo
             /*string fullName = "Serdar Uz";

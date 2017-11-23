@@ -25,10 +25,11 @@ namespace EmptyConsoleApplication
         public string PhoneNumber { get; set; }
         public long CitizenNumber { get; set; }
         public char Gender { get; set; }
-        public void ReturnInfo (){
+        public void WriteInfo (){
             Console.WriteLine("Name: " + Name + "\nAge: " + Age + 
                 "\nPhone Number: " + PhoneNumber + "\nCitizenNumber: " + CitizenNumber 
                 + "\nGender: "+ Gender);
+            Console.WriteLine("Name: {0}\nAge: {1}\nPhone Number: {2}\nCitizenNumber: {3}\nGender: {4}" + Gender,Name,Age,PhoneNumber,CitizenNumber,Gender);
         }
     }
 }
