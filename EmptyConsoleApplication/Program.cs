@@ -10,18 +10,14 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
-            string FullName = "Gizem Balıktutan"; /**/
-            short Experience = 2;
-            string Department = "POS Uygulamaları";
-            string ProgrammingLanguage = "PL/SQL, C++";
-            string Expectation = "Başarı";
-
-            Console.WriteLine("İsim = " + FullName);
-            Console.WriteLine("Birim = " + Department);
-            Console.WriteLine("Deneyim = " + Experience + " yıl");
-            Console.WriteLine("Programlama Dilleri = " + ProgrammingLanguage);
-            Console.WriteLine("Beklenti = " + Expectation);
-            Console.ReadLine(); /*bu komut siyah ekranı bekletir.*/
+            int sum = 0;
+            for (int i = 1; i < 1000; i++)
+            {
+                sum = sum + i; 
+            }
+            Console.WriteLine(sum);
+            Console.ReadLine();
         }
     }
 }
+
