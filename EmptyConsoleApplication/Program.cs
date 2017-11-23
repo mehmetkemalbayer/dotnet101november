@@ -23,6 +23,7 @@ namespace EmptyConsoleApplication
             Console.WriteLine("Beklenti: @'aaa'" + expectation);
             Console.ReadLine();*/
 
+            /*
             // Faiz tutarı hesaplaması
             try {
                 Console.WriteLine("Tutar giriniz: ");
@@ -45,7 +46,15 @@ namespace EmptyConsoleApplication
             {
                 Console.WriteLine(e.Message);
                 Console.ReadLine();
+            }*/
+
+            int i,toplam=0 ;
+            for (i = 0; i <= 1000; i++)
+            {
+                toplam = toplam + i;
             }
+            Console.WriteLine("Toplam: "+toplam);
+            Console.ReadLine();
         }
     }
 }
