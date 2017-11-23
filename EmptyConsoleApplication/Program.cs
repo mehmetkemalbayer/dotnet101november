@@ -6,18 +6,32 @@ using System.Threading.Tasks;
 
 namespace EmptyConsoleApplication
 {
-    class Program
+
+    class Interest
     {
         static void Main(string[] args)
         {
-            int sum = 0;
-            for (int i = 1; i < 1000; i++)
-            {
-                sum = sum + i; 
-            }
-            Console.WriteLine(sum);
+            Console.WriteLine("Amount : ");
+            string samount = Console.ReadLine();
+            decimal amount = Convert.ToDecimal(samount);
+
+            Console.WriteLine("Year : ");
+            string syear = Console.ReadLine();
+            int year = Convert.ToInt16(syear);
+
+            Console.WriteLine("Interest Rate : ");
+            string sinterestRate = Console.ReadLine();
+            decimal interestRate = Convert.ToDecimal(sinterestRate);
+
+            decimal result = amount * year * interestRate / 100;
+            Console.WriteLine("The result is : " + result);
             Console.ReadLine();
+
         }
+
     }
+
 }
+
+
 
