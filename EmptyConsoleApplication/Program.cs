@@ -10,6 +10,13 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
+            User firstUser = new User(5);
+            firstUser.ReturnInfo();
+            User secondUser = new User();
+            secondUser.ReturnInfo();
+            Console.ReadLine();
+
+            // myinfo
             /*string fullName = "Serdar Uz";
             short experience = 11;
             string department = "Süreç ve Ölçme";
@@ -48,6 +55,8 @@ namespace EmptyConsoleApplication
                 Console.ReadLine();
             }*/
 
+            /*
+            // 1 den 1000 e toplam
             int i,toplam=0 ;
             for (i = 0; i <= 1000; i++)
             {
@@ -55,6 +64,7 @@ namespace EmptyConsoleApplication
             }
             Console.WriteLine("Toplam: "+toplam);
             Console.ReadLine();
+            */
         }
     }
 }
