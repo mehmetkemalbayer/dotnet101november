@@ -7,31 +7,25 @@ using System.Threading.Tasks;
 namespace EmptyConsoleApplication
 {
 
-    class Interest
+    class Program
     {
         static void Main(string[] args)
+
         {
-            Console.WriteLine("Amount : ");
-            string samount = Console.ReadLine();
-            decimal amount = Convert.ToDecimal(samount);
+            User firstUser = new User(5);
+            firstUser.WriteInfo();
 
-            Console.WriteLine("Year : ");
-            string syear = Console.ReadLine();
-            int year = Convert.ToInt16(syear);
+            User secondUser = new User();
+            secondUser.WriteInfo();
 
-            Console.WriteLine("Interest Rate : ");
-            string sinterestRate = Console.ReadLine();
-            decimal interestRate = Convert.ToDecimal(sinterestRate);
-
-            decimal result = amount * year * interestRate / 100;
-            Console.WriteLine("The result is : " + result);
-            Console.ReadLine();
-
+            /*
+            * Name : "Default"
+            * Age : 0
+            * PhoneNumber : 55555555
+            * CitizenNumber : 00000000000
+            * Gender : "-"
+           */
         }
-
     }
 
 }
-
-
-
