@@ -10,24 +10,36 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
-          
-
-            string fullName ="Seda Yaman";
-            short  experience= 8;
-            string department ="Uygulama Destek Uzman Yardımcısı";
-            string programmingLanguage="C#,JAVA,.NET,HTML";
-            string experation="Yeni bilgiler ile kendimi geliştirmek";
-
-            Console.WriteLine("İsim:"+fullName);
-            Console.WriteLine("Tecrübe:"+experience+"ay");
-            Console.WriteLine("Bölüm:"+department);
-            Console.WriteLine("Diller:"+programmingLanguage);
-            Console.WriteLine("Beklenti:"+experation);
-           
+            Console.WriteLine("{0} ile {1} arasında bir sayı giriniz", 0, 100);
+            TahminOyunu(0, 100);
             Console.ReadLine();
 
-          
+        }
+        static void TahminOyunu(int altsinir, int ustsinir)
+        {            
+            Console.WriteLine("Tuttuğunuz sayı {0} mi?", (altsinir + ustsinir) / 2);
 
+            string yonlendirme = Console.ReadLine();
+
+            if (yonlendirme == "B")
+            {
+                altsinir = (altsinir + ustsinir) / 2;
+                TahminOyunu(altsinir, ustsinir);
+            }
+            else if (yonlendirme == "K")
+            {
+                ustsinir = (altsinir + ustsinir) / 2;
+                TahminOyunu(altsinir, ustsinir);
+            }
+            else if (yonlendirme == "D")
+            {
+                Console.WriteLine("benle oynadığınız için teşekkür ederim");
+            }
+            else
+            {
+                Console.WriteLine("Yanlış B, K, D girebülürsüüz");
+                TahminOyunu(altsinir, ustsinir);
+            }
         }
     }
 }
