@@ -4,29 +4,65 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmptyConsoleApplication
+namespace sayitahminpc
 {
     class Program
     {
         static void Main(string[] args)
         {
+            try
+            {
+                int min = 0, max = 100, tahmin, sayac = 1;
+                char cevap;
+                Random rnd = new Random();
+                while (true)
+                {
+                    Console.Clear();
+                    tahmin = rnd.Next((min + 1), max);
+                    //if (sayac == 1)
+                    //    tahmin = 50;
+                    Console.WriteLine("Tahminim  " + tahmin);
+                    Console.WriteLine("Tahminim Aklındaki Sayıdan Büyükse (b)");
+                    Console.WriteLine("Tahminim Aklındaki Sayıdan Küçükse (k)");
+                    Console.WriteLine("Tahminim Doğruysa (e)");
 
-            string fullname = "UMUT YAMAN";
-            string experience = "8 AY";
-            string department = "UYGULAMA DESTEK / Ticari Krediler Ürün Geliştirme";
-            string programmingLanguages = "PL/SQL , COBOL";
-            string expactation = "C# KULLANABİLECEĞİMİ DÜŞÜNEREK AYRILMAK :)";
+                    while (true)
+                    {
+                        cevap = Console.ReadKey().KeyChar;
+                        if (cevap == 'e' || cevap == 'b' || cevap == 'k')
+                        {
+                            break;//ahmetcansever.com
+                        }
+                        Console.WriteLine("  Lütfen yönlendirmeyi yapın düzgün yapın!");
+                    }
 
+                    if (cevap == 'e')
+                    {
+                        break;
+                    }
+                    else if (cevap == 'b')
+                    {//ahmetcansever.com
+                        max = tahmin;
+                    }
+                    else if (cevap == 'k')
+                    {
+                        min = tahmin;
+                    }
+                    sayac++;
+                }
+                Console.WriteLine();
+                Console.WriteLine("Sonucu buldum. Tuttuğun Sayı : " + tahmin);
+                Console.WriteLine("Tahmin Sayısı : " + sayac);
+            }
+            catch
+            {//ahmetcansever.com
+                Console.WriteLine("Yanlış Yönlendirme Yaptınız!!!");
+            }
+            finally
+            {
+                Console.ReadKey();
+            }
 
-            Console.WriteLine("İsim     : " + fullname);
-            Console.WriteLine("Deneyim  : " + experience);
-            Console.WriteLine("Bölüm    : " + department);
-            Console.WriteLine("Diller   : " + programmingLanguages);
-            Console.WriteLine("Beklenti : " + expactation);
-
-            Console.ReadLine();
-        
-        
         }
     }
 }
