@@ -12,31 +12,36 @@ namespace EmptyConsoleApplication
        
         static void Main(string[] args)
         {
-            Console.WriteLine("tutarı giriniz");
-            string tutar = Console.ReadLine();
-            Console.WriteLine("yılı giriniz");
-            string yil = Console.ReadLine();
-            Console.WriteLine("faizi giriniz");
-            string faiz = Console.ReadLine();
-            decimal tutar1 = Convert.ToDecimal(tutar);
-            decimal yil1 = Convert.ToDecimal(yil);
-            decimal faiz1 = Convert.ToDecimal(faiz);
+            int minDeger = 0;
+            int maxDeger = 100;
+            int tahmin = 50;
+            string durum = "r";
+            while (durum!="d")
+            {
 
-            decimal faiz_getirisi = tutar1 * (faiz1 / 100) * yil1;
+                Console.WriteLine("tuttuğun sayı " + tahmin + " mi ?");
+                durum= Console.ReadLine();
 
-            Console.WriteLine("faiz getirisi" + faiz_getirisi);
-            Console.ReadLine();
-                       
-            
+                if (durum == "k")
+                {
+                    maxDeger = tahmin;
+                    tahmin = minDeger + (maxDeger - minDeger) / 2; 
+
+                }
+                if (durum == "b")
+                {
+                    minDeger = tahmin;
+                    tahmin = minDeger + (maxDeger - minDeger) / 2;
+                }
+                
+                    
+                }
 
 
+                    
 
+            }
+            }
 
-        }
-
-
-    }
-
-
-}
+        }        
 
