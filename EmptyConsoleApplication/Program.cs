@@ -7,13 +7,46 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("işlem için sayı giriniz:");
-            int sayi1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("işlem için ikini sayıyı giriniz:");
-            int sayi2 = Convert.ToInt32(Console.ReadLine());
-            SimpleCalculator sCalc = new SimpleCalculator(sayi1, sayi2);
-            Console.WriteLine("toplam={0}", sCalc.Sum());
+            Console.WriteLine("tahmin oyunumuza başlayalım. bir sayı tut?");
+
+            
+            int bas = 0;
+            int bit = 100;
+            bool isBulundu = false;
+            
+
+            while(!isBulundu)
+            {
+                int yari = (bas + bit) / 2;
+
+                Console.WriteLine("Sayı "+yari+" mi?");
+                string sdurum = Console.ReadLine();
+                char durum = sdurum[0];
+                Console.WriteLine(durum);
+
+
+
+                if (durum == 'K')
+                {
+                    Console.WriteLine("k yı eşit buldu");
+                    bit = yari;
+                }
+                else if (durum == 'B')
+                {
+                    bas = yari;
+                    Console.WriteLine("B yı eşit buldu");
+                }
+                else 
+                {
+                    Console.WriteLine("Bingo");
+                    isBulundu = true;
+                }
+
+                Console.WriteLine("yari : " + yari);
+            }
             Console.Read();
         }
+
+
     }
 }
