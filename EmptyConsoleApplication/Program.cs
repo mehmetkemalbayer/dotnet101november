@@ -10,37 +10,38 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
-
-            int toplam = 0;
-
-            for (int i = 0; i < 1000; i++)
-            {
-                toplam += i;
-            }
-            Console.WriteLine(toplam);
-
-           
-
-
-
-           
+            Console.WriteLine("{0} ile {1} arasında bir sayı giriniz", 0, 100);
+            TahminOyunu(0, 100);
             Console.ReadLine();
 
-          
         }
-
-      static  void WriteName (string name)
+        static void TahminOyunu(int altsinir, int ustsinir)
         {
-            Console.WriteLine("İsim :" + name);
-          Console.WriteLine();
-        }
+            Console.WriteLine("Tuttuğunuz sayı {0} mi?", (altsinir + ustsinir) / 2);
 
-      static  void WriteExperience(short ay)
-        {
-            Console.WriteLine("Deneyim :" + ay + "ay");
+            string yonlendirme = Console.ReadLine();
+
+            if (yonlendirme == "B")
+            {
+                altsinir = (altsinir + ustsinir) / 2;
+                TahminOyunu(altsinir, ustsinir);
+            }
+            else if (yonlendirme == "K")
+            {
+                ustsinir = (altsinir + ustsinir) / 2;
+                TahminOyunu(altsinir, ustsinir);
+            }
+            else if (yonlendirme == "D")
+            {
+                Console.WriteLine("benle oynadığınız için teşekkür ederiz");
+            }
+            else
+            {
+                Console.WriteLine("Yanlış B, K, D girebülürsüüz");
+                TahminOyunu(altsinir, ustsinir);
+            }
+
         }
         
     }
-
-    
 }
