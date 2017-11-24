@@ -10,14 +10,22 @@ namespace EmptyConsoleApplication
     {
         static void Main(string[] args)
         {
-			int total = 0;
-			for (int i = 0; i <= 1000; i++)
-			{
-				total = total + i;
-				Console.WriteLine(total);
-			}
-			Console.WriteLine("Toplam: " + total);
-			Console.ReadLine();
+            Console.WriteLine("0-100 arası bir sayı tutunuz: " );
+            string sayi1 = Console.ReadLine();
+            int sayi2 = Convert.ToInt32(sayi1);
+
+            if (sayi2 < 50)
+            {
+                Console.WriteLine("sayı küçük");
+                Console.ReadLine();
+
+            }
+            else
+            {
+                Console.WriteLine("sayı büyük");
+                Console.ReadLine();
+            }
+			
 
 		}
 
