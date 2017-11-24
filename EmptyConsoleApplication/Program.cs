@@ -11,8 +11,10 @@ namespace EmptyConsoleApplication
         static void Main(string[] args)
         {
 
-            Animal animal = new Animal();
+            Animal animal = new Cat();
             animal.Sound();
+            Cat serdar = animal as Cat;
+            serdar.Sound();
             Cat cat = new Cat();
             cat.Sound();
             Dog dog = new Dog();
